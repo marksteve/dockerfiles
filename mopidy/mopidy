@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo docker run -t -i \
+  -v `pwd`/share:$HOME/.local/share/mopidy \
+  -v `pwd`/config:$HOME/.config/mopidy \
+  -v `pwd`/media:/var/media \
+  -v /dev/snd:/dev/snd \
+  -lxc-conf='lxc.cgroup.devices.allow = c 116:* rwm' \
+  -p 6600:6600 \
+  -p 6680:6680 \
+  -h mopidy \
+  mopidy $@
