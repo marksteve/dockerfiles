@@ -1,0 +1,18 @@
+#!/bin/bash
+mysqld_safe &
+
+# Wait for MySQL server sto start
+while true; do
+  echo "Waiting for MySQL server to start..."
+  mysqladmin ping >/dev/null 2>&1 && break
+  sleep 0.5
+done
+
+# Setup system tables
+mysql_install_db
+
+# Allow access from linking containers
+echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.17.0.0/255.255.0.0';" | mysql -uroot
+
+# Shut down
+mysqladmin shutdown
