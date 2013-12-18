@@ -10,6 +10,7 @@ RUN apt-get install -y ruby rubygems
 RUN apt-get install -y nodejs
 RUN gem install sass
 RUN gem install bourbon
+RUN apt-get install -y git
 RUN git clone https://github.com/TryGhost/Ghost.git /ghost
 WORKDIR /ghost
 RUN npm install
