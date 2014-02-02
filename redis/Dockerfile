@@ -8,5 +8,4 @@ RUN apt-get -y install redis-server
 RUN mkdir -p /data
 VOLUME ['/data']
 EXPOSE 6379
-ENTRYPOINT ["redis-server"]
-CMD ["--dir", "/data"]
+CMD ["redis-server", "--dir", "/data"]
