@@ -9,10 +9,10 @@ while true; do
 done
 
 # Setup system tables
-mysql_install_db
+mysql_install_db >/dev/null 2>&1 && echo "Installed system tables"
 
-# Allow access from linking containers
-echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.17.0.0/255.255.0.0';" | mysql -uroot
+# Execute /tmp/setup.sql
+mysql -uroot < /tmp/setup.sql  && echo "Executed /tmp/setup.sql"
 
 # Shut down
 mysqladmin shutdown

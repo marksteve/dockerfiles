@@ -1,10 +1,10 @@
-FROM ubuntu
+FROM marksteve/base
 MAINTAINER marksteve
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -q update
 RUN apt-get -y install mysql-server
-ADD setup /tmp/setup
-RUN /tmp/setup
 EXPOSE 3306
-VOLUME ["/var/lib/mysql"]
+ADD setup /tmp/setup
+ONBUILD ADD setup.sql /tmp/setup.sql
+ONBUILD RUN /tmp/setup
+ONBUILD RUN rm /tmp/setup && rm /tmp/setup.sql
+ONBUILD VOLUME ["/var/lib/mysql"]
 CMD ["mysqld_safe", "--bind-address=0.0.0.0"]
