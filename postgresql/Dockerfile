@@ -1,6 +1,5 @@
-FROM ubuntu
+FROM marksteve/base
 MAINTAINER marksteve
-ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y install postgresql-client-9.1 postgresql-9.1
 ENV PGDATA /var/lib/pgsql/data
 ENV PATH $PATH:/usr/lib/postgresql/9.1/bin
