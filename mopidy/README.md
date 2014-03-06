@@ -6,28 +6,38 @@ Docker image for Mopidy (http://www.mopidy.com)
 Usage
 -----
 
-1. Build docker image
-  
-  ```sh
-  $ ./build
-  ```
-
-2. Create mopidy dirs
+1. Build docker image.
 
   ```sh
-  $ mkdir share media
+  $ sudo docker build -rm -t mopidy .
   ```
 
-3. Initialize mopidy files by running it the first time
+2. Initialize mopidy volume which keeps library files and other states.
 
   ```sh
-  $ ./mopidy
+  $ ./mopidy-volume
   ```
 
-4. Add songs to `/media` then update tags
+3. Make `./mopidy-docker` available in your `$PATH`.
 
   ```sh
-  $ ./mopidy local scan
+  $ ln -s `pwd`/mopidy-docker /usr/local/bin/
   ```
 
-5. Run `./mopidy` again and start playing some beats!
+4. Set working directory to where your music files are.
+
+  ```sh
+  $ cd ~/Music
+  ```
+
+5. Scan for music files.
+
+  ```sh
+  $ mopidy-docker mopidy local scan
+  ```
+
+6. Run mopidy server.
+
+  ```sh
+  $ mopidy-docker
+  ```
