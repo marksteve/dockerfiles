@@ -9,4 +9,4 @@ sudo docker run -t -i \
   -rm \
   -volumes-from mopidy-volume \
   --name mopidy \
-  mopidy $@
+  marksteve/mopidy $@

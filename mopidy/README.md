@@ -9,7 +9,7 @@ Usage
 1. Build docker image.
 
   ```sh
-  $ sudo docker build -rm -t mopidy .
+  $ sudo docker build -rm -t marksteve/mopidy .
   ```
 
 2. Initialize mopidy volume which keeps library files and other states.

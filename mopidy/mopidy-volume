@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker run -d --name mopidy-volume mopidy
+sudo docker run -d --name mopidy-volume marksteve/mopidy

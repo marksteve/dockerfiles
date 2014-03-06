@@ -11,3 +11,7 @@ zeroconf =
 
 [audio]
 output = alsasink
+
+[soundcloud]
+auth_token = 1-1111-1111111
+explore_songs = 25
