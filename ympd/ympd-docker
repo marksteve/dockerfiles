@@ -1,2 +1,6 @@
 #!/bin/bash
-sudo docker run -d -p 8080:8080 --name ympd marksteve/ympd ympd -h 172.17.42.1
+sudo docker run -t -i -rm \
+  -p 8080:8080 \
+  --name ympd \
+  marksteve/ympd \
+  ympd -h 172.17.42.1

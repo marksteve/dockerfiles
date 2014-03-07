@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo docker run -d \
+sudo docker run -t -i -rm \
   -v `pwd`:/var/media \
   -v /dev/snd:/dev/snd \
   -lxc-conf='lxc.cgroup.devices.allow = c 116:* rwm' \
