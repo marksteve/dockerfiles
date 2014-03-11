@@ -1,9 +1,7 @@
-FROM ubuntu
+FROM marksteve/base
 MAINTAINER marksteve
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -y install python-software-properties
 RUN apt-add-repository -y ppa:rwky/redis
-RUN apt-get -q update
+RUN apt-get update
 RUN apt-get -y install redis-server
 RUN mkdir -p /data
 VOLUME ['/data']
