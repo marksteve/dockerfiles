@@ -12,5 +12,4 @@ RUN tar -C /usr/local -xzf /tmp/go.tar.gz
 RUN mkdir /go
 
 ENV GOPATH /go
-ENV PATH $PATH:/usr/local/go/bin:$GOPATH
-VOLUME ["/go"]
+ENV PATH $PATH:/usr/local/go/bin:$GOPATH/bin
