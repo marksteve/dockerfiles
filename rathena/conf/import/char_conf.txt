@@ -1,0 +1,6 @@
+userid: admin
+passwd: admin
+login_ip: 127.0.0.1
+char_ip: 192.168.1.147
+start_point: prontera,160,160
+start_zeny: 10000000

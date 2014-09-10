@@ -1,0 +1,37 @@
+login_server_ip: mysql
+login_server_port: 3306
+login_server_id: root
+login_server_pw: password
+login_server_db: ragnarok
+login_codepage:
+login_case_sensitive: no
+
+ipban_db_ip: mysql
+ipban_db_port: 3306
+ipban_db_id: root
+ipban_db_pw: password
+ipban_db_db: ragnarok
+ipban_codepage:
+
+// MySQL Character server
+char_server_ip: mysql
+char_server_port: 3306
+char_server_id: root
+char_server_pw: password
+char_server_db: ragnarok
+
+map_server_ip: mysql
+map_server_port: 3306
+map_server_id: root
+map_server_pw: password
+map_server_db: ragnarok
+
+// MySQL Log Database
+log_db_ip: mysql
+log_db_port: 3306
+log_db_id: root
+log_db_pw: password
+log_db_db: ragnarok
+log_codepage:
+log_login_db: loginlog
+
