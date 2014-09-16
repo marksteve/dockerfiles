@@ -1,0 +1,4 @@
+base_exp_rate: 100000
+job_exp_rate: 100000
+mvp_exp_rate: 100000
+quest_exp_rate: 100000
