@@ -1,0 +1,8 @@
+roBrowser:
+  build: .
+  volumes:
+    - /ro/resources:/roBrowser/client/resources
+    - /ro/BGM:/roBrowser/client/BGM
+    - /ro/data:/roBrowser/client/data
+  ports:
+    - 8080:8080
