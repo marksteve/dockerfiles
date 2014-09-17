@@ -5,4 +5,4 @@ roBrowser:
     - /ro/BGM:/roBrowser/client/BGM
     - /ro/data:/roBrowser/client/data
   ports:
-    - 8080:8080
+    - 8080
